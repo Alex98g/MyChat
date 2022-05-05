@@ -1,0 +1,1 @@
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat.UWP\MyChat.UWP.csproj;x86

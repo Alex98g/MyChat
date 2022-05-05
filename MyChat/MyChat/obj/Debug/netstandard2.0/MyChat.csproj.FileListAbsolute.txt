@@ -1,0 +1,17 @@
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MyChat.csproj.AssemblyReference.cache
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MyChat.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\FirstPage.xaml.g.cs
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\RegistrPage.xaml.g.cs
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MyChat.AssemblyInfoInputs.cache
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MyChat.AssemblyInfo.cs
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MyChat.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\bin\Debug\netstandard2.0\MyChat.deps.json
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\bin\Debug\netstandard2.0\MyChat.dll
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\bin\Debug\netstandard2.0\MyChat.pdb
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MyChat.dll
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\refint\MyChat.dll
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\MyChat.pdb
+C:\Users\Alex\source\repos\MyChat\MyChat\MyChat\obj\Debug\netstandard2.0\ref\MyChat.dll

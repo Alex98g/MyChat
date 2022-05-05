@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyChat.FirstPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="40" BackgroundColor="Beige">
+            <BoxView HeightRequest="150"/>
+            
+            <Frame BackgroundColor="Blue" HasShadow="False" BorderColor="Black">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Entry x:Name="Login" Text="{Binding Login}" Placeholder="Enter your username"   
+                           PlaceholderColor="Black" HeightRequest="40"    
+                           TextColor="Black" BackgroundColor="White" FontSize="20"/>
+                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Enter your password"   
+                           PlaceholderColor="Black" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="Black" BackgroundColor="White" FontSize="20"/>
+                </StackLayout>
+            </Frame>
+            <Button Pressed="Log_on" Text="Log on" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"  
+                    BackgroundColor="Blue" WidthRequest="250"/>
+            <Button Pressed="Reg" Text="Sign up" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"  
+                    BackgroundColor="Blue" WidthRequest="250"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyChat.MainPage">
+
+    <StackLayout BackgroundColor="Aquamarine">
+        <Frame BackgroundColor="Wheat"  WidthRequest="100" HeightRequest="100" HorizontalOptions="End" BorderColor="Blue">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Exit" Pressed="Exit_Pressed" BackgroundColor="Blue" FontSize="20" />
+            </Grid>
+        </Frame>
+
+
+        <ListView x:Name="MessagesList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span TextColor="{DynamicResource LoginColor}" Text="{Binding UserLogin}" FontSize="20"/>
+                                        <Span TextColor="{DynamicResource LoginColor}" Text=": " FontSize="20"/>
+                                        <Span TextColor="Black" Text="{Binding Text}" FontSize="20"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Entry x:Name="MessageEntry" BackgroundColor="AliceBlue" TextColor="Black" FontSize="20" TextChanged="Entry_TextChanged"/>
+        <Button x:Name="BtnSendMessage" Text="Send" Pressed="Send_Pressed" BackgroundColor="Blue" FontSize="20" IsEnabled="false"/>
+    </StackLayout>
+
+</ContentPage>
