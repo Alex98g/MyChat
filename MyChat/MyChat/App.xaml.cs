@@ -13,12 +13,20 @@ namespace MyChat
         {
             InitializeComponent();
             string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "account.txt");
-            List<string> lst = File.ReadAllLines(fileName).ToList();
-            if (lst[3] == "false")
+            if (!File.Exists(fileName))
             {
+                File.Create(fileName).Close();
                 MainPage = new FirstPage();
+            } else
+            {
+                List<string> lst = File.ReadAllLines(fileName).ToList();
+                if (lst[3] == "false")
+                {
+                    MainPage = new FirstPage();
+                }
+                else { MainPage = new MainPage(); }
             }
-            else { MainPage = new MainPage(); }
+            
         }
     }
 }

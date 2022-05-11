@@ -17,23 +17,23 @@ namespace MyChat
 {
     public partial class MainPage : ContentPage
     {
-        private ChatServiceClient chatServiceClient;
-        private SimpleChatApp.GrpcService.Guid guid;
         string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "account.txt");
         //C:\Users\Your User\AppData\Local\Packages\15738FE9-45B8-4B14-B1DD-AF08133F570B_pf1d5chqd35vc\LocalState\account.txt
         List<string> lst;
-        private ObservableCollection<SimpleChatApp.CommonTypes.MessageData> chat = new ObservableCollection<SimpleChatApp.CommonTypes.MessageData> ();
+        public ChatServiceClient chatServiceClient;
+        public SimpleChatApp.GrpcService.Guid guid;
+        public ObservableCollection<SimpleChatApp.CommonTypes.MessageData> chat = new ObservableCollection<SimpleChatApp.CommonTypes.MessageData>();
         
-
-
         public MainPage() 
         {
             InitializeComponent();
-            lst = File.ReadAllLines(fileName).ToList();
             chatServiceClient = new ChatServiceClient(new Channel("Localhost", 30051, ChannelCredentials.Insecure));
+            lst = File.ReadAllLines(fileName).ToList();
             MessagesList.ItemsSource = chat;
-            Login_Pressed();
             Resources["LoginColor"] = Color.FromHex(lst[2]);
+            Login_Pressed();
+            
+            
         }
         public void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
