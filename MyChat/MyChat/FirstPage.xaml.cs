@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,35 +10,73 @@ namespace MyChat
     {
         public String login;
         public String password;
-        List<string> lst;
-
         public FirstPage()
         {
             InitializeComponent();
+            Login1.Text = "";
+            Password.Text = "";
+        }
+
+        private async void ReqLogin(string username, string password)
+        {
+            ServerStatus result = await Client.Instance.Login(username, password);
+
+            switch (result)
+            {
+                case ServerStatus.SUCCESS:
+                    await Navigation.PushModalAsync(new MainPage());
+                    break;
+                case ServerStatus.ERROR_LOGIN_BAD_LOGIN:
+                    await DisplayAlert("Ошибка", "Неверный пароль или логин", "OK");
+                    break;
+                case ServerStatus.ERROR_UNKNOWN:
+                    await DisplayAlert("Ошибка", "Неизвестная ошибка", "OK");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void EntryLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((Login1.Text != "") & (Password.Text != ""))
+            {
+              Login_ON.IsEnabled = true;
+            }
+            else
+            {
+               Login_ON.IsEnabled = false;
+            }
+        }
+        public void EntryPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((Login1.Text != "") & (Password.Text != ""))
+            {
+                Login_ON.IsEnabled = true;
+            }
+            else
+            {
+                Login_ON.IsEnabled = false;
+            }
+        }
+        private async void Log_on(object sender, EventArgs e)
+        {
+            ReqLogin(Login1.Text, Password.Text);
         }
         private async void Reg(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new RegistrPage());
         }
-        private async void Log_on(object sender, EventArgs e)
-        {
-            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "account.txt");
-            lst = File.ReadAllLines(fileName).ToList();
-            Debug.WriteLine(lst[0]);
-            if (Login.Text != lst[0] || Password.Text != lst[1])
-            {
-                await DisplayAlert("Ошибка", "Неверный логин или пароль, попробуйте еще раз", "OK");
-            }
-            else
-            {
-                lst.RemoveAt(3);
-                lst.Add("true");
-                File.WriteAllLines(fileName, lst);
 
-                await Navigation.PushModalAsync(new MainPage());
-            }
-        }
-       
+
+
+
+
+
+
+
+
+
 
     }
 }

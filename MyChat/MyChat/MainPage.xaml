@@ -22,8 +22,8 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span TextColor="{DynamicResource LoginColor}" Text="{Binding UserLogin}" FontSize="20"/>
-                                        <Span TextColor="{DynamicResource LoginColor}" Text=": " FontSize="20"/>
+                                        <Span TextColor="{Binding LoginColor}" Text="{Binding UserLogin}" FontSize="20"/>
+                                        <Span TextColor="{Binding LoginColor}" Text=": " FontSize="20"/>
                                         <Span TextColor="Black" Text="{Binding Text}" FontSize="20"/>
                                     </FormattedString.Spans>
                                 </FormattedString>

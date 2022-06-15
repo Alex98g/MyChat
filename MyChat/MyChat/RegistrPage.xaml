@@ -9,58 +9,21 @@
                 <StackLayout Orientation="Vertical" Spacing="10">
                     <Entry x:Name="Login" Text="{Binding Login}" Placeholder="Enter your username"   
                            PlaceholderColor="Black" HeightRequest="40"    
-                           TextColor="Black" BackgroundColor="White" FontSize="20"/>
+                           TextColor="Black" BackgroundColor="White" FontSize="20" TextChanged="EntryLogin_TextChanged"/>
                     <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Enter your password"   
                            PlaceholderColor="Black" HeightRequest="40"   
-                           IsPassword="True"  
-                           TextColor="Black" BackgroundColor="White" FontSize="20"/>
+                           IsPassword="True" TextColor="Black" BackgroundColor="White" FontSize="20" TextChanged="EntryPassword_TextChanged"/>
                     <Entry x:Name="ReplyPassword" Text="{Binding ReplyPassword}" Placeholder="Enter your password again"   
                            PlaceholderColor="Black" HeightRequest="40"   
                            IsPassword="True"  
-                           TextColor="Black" BackgroundColor="White" FontSize="20"/>
+                           TextColor="Black" BackgroundColor="White" FontSize="20" TextChanged="EntryReplyPassword_TextChanged"/>
                     
                 </StackLayout>
             </Frame>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Frame BackgroundColor="Wheat"  WidthRequest="200" HorizontalOptions="Start" BorderColor="Blue" Grid.Column="0" Grid.Row="0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-
-                        <Button BackgroundColor="Red" Pressed="Pressed_Red" Grid.Column="0" Grid.Row="0" WidthRequest="35" HeightRequest="35"/>
-                        <Button BackgroundColor="Black" Pressed="Pressed_Black" Grid.Column="1" Grid.Row="0" WidthRequest="35" HeightRequest="35"/>
-                        <Button BackgroundColor="Yellow" Pressed="Pressed_Yellow" Grid.Column="2" Grid.Row="0" WidthRequest="35" HeightRequest="35"/>
-                        <Button BackgroundColor="Blue" Pressed="Pressed_Blue" Grid.Column="3" Grid.Row="0" WidthRequest="35" HeightRequest="35"/>
-                        <Button BackgroundColor="Orange" Pressed="Pressed_Orange" Grid.Column="4" Grid.Row="0" WidthRequest="35" HeightRequest="35"/>
-                    </Grid>
-                </Frame>
-
-                <Frame BackgroundColor="Aquamarine"  WidthRequest="100" HorizontalOptions="Start" BorderColor="Blue" Grid.Column="1" Grid.Row="0">
-                    <Grid>
-                        <Label HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span x:Name="Span_Color" TextColor="Blue" Text="UserName" FontSize="20"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        
-                    </Grid>
-                </Frame>
-            </Grid>
-            <Button Pressed="Register_Pressed" Text="Register" TextColor="White"  
+            
+            <Button x:Name="Reg" Pressed="Register_Pressed" Text="Register" TextColor="White"  
                     FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"  
-                    BackgroundColor="Blue" WidthRequest="250"/>
+                    BackgroundColor="Blue" WidthRequest="250" IsEnabled="false"/>
             <Button Pressed="Exit" Text="Back" TextColor="White"  
                     FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"  
                     BackgroundColor="Blue" WidthRequest="250"/>

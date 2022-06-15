@@ -8,18 +8,18 @@
             
             <Frame BackgroundColor="Blue" HasShadow="False" BorderColor="Black">
                 <StackLayout Orientation="Vertical" Spacing="10">
-                    <Entry x:Name="Login" Text="{Binding Login}" Placeholder="Enter your username"   
+                    <Entry x:Name="Login1" Text="{Binding Login1}" Placeholder="Enter your username"   
                            PlaceholderColor="Black" HeightRequest="40"    
-                           TextColor="Black" BackgroundColor="White" FontSize="20"/>
+                           TextColor="Black" BackgroundColor="White" FontSize="20" TextChanged="EntryLogin_TextChanged"/>
                     <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Enter your password"   
                            PlaceholderColor="Black" HeightRequest="40"   
                            IsPassword="True"  
-                           TextColor="Black" BackgroundColor="White" FontSize="20"/>
+                           TextColor="Black" BackgroundColor="White" FontSize="20" TextChanged="EntryPassword_TextChanged"/>
                 </StackLayout>
             </Frame>
-            <Button Pressed="Log_on" Text="Log on" TextColor="White"  
+            <Button x:Name="Login_ON" Pressed="Log_on" Text="Log on" TextColor="White"  
                     FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"  
-                    BackgroundColor="Blue" WidthRequest="250"/>
+                    BackgroundColor="Blue" WidthRequest="250" IsEnabled="false"/>
             <Button Pressed="Reg" Text="Sign up" TextColor="White"  
                     FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"  
                     BackgroundColor="Blue" WidthRequest="250"/>
